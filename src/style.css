@@ -1,3 +1,24 @@
-h1 {
-  color: blue;
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 8vh;
+  background-color: #801336;
+  background-color: black;
+}
+.nav-links {
+  display: flex;
+  width: 50%;
+  justify-content: space-around;
+}
+li {
+  list-style: none;
+}
+img {
+  padding: 2vh;
 }
