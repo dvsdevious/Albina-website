@@ -15,10 +15,24 @@ nav {
   display: flex;
   width: 50%;
   justify-content: space-around;
+  margin: 1vh;
+  padding: 2vh;
 }
-li {
+.nav-links a {
+  list-style: none;
+  text-decoration: none;
+  color: white;
+}
+.nav-links li {
   list-style: none;
 }
+.fa-instagram {
+  color: white;
+  font-size: 30px;
+}
+li {
+}
 img {
+  margin: 1vh;
   padding: 2vh;
 }
