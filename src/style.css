@@ -26,6 +26,20 @@ nav {
   font-family: "Oswald", serif;
   font-size: larger;
 }
+.nav-item:hover:before {
+  opacity: 1;
+  bottom: 0;
+}
+.nav-item:hover {
+  color: #f45fe3;
+}
+.is-active:hover:before {
+  opacity: 1;
+  bottom: 0;
+}
+.is-active:hover {
+  color: #f45fe3;
+}
 .nav-links li {
   list-style: none;
 }
@@ -174,6 +188,18 @@ nav {
 .content-workouts p {
   color: aliceblue;
 }
+
+/* JOIN ME */
+.join {
+  margin: 150px auto;
+  width: 40%;
+  border: 8px solid #f45fe3;
+  border-style: double;
+  padding: 50px 50px 50px 50px;
+  box-sizing: border-box;
+  box-shadow: 0 0 20px #f45fe3;
+}
+
 /* All other stuff */
 
 .fa-instagram {
