@@ -11,9 +11,26 @@ nav {
   background-color: black;
   opacity: 90%;
 }
+.nav-links {
+  display: flex;
+  width: 50%;
+  justify-content: space-around;
+  margin: 1vh 1vh;
+  margin-right: 0vh;
+  padding: 2vh;
+}
+.nav-links a {
+  list-style: none;
+  text-decoration: none;
+  color: white;
+}
+.nav-links li {
+  list-style: none;
+}
 .logo img {
   zoom: 200%;
 }
+/* Home Page */
 .banner-area {
   width: 100%;
   height: 100vh;
@@ -21,6 +38,7 @@ nav {
     url("../media/Lifting.jpg");
   background-size: cover;
 }
+
 .content-area {
   height: 100%;
 }
@@ -37,6 +55,7 @@ nav {
 .content p {
   color: aliceblue;
 }
+
 .content .btn {
   border: none;
   outline: none;
@@ -65,22 +84,14 @@ nav {
   border-radius: 10px;
   box-shadow: 0 0 10px -3px rgba(0, 0, 0, 0.1);
 }
-.nav-links {
-  display: flex;
-  width: 50%;
-  justify-content: space-around;
-  margin: 1vh 1vh;
-  margin-right: 0vh;
-  padding: 2vh;
+/* Nutrition Page */
+.banner-area-nutrition {
+  width: 100%;
+  height: 100vh;
+  background-image: url("../media/Nutrition.jpg");
+  background-size: cover;
 }
-.nav-links a {
-  list-style: none;
-  text-decoration: none;
-  color: white;
-}
-.nav-links li {
-  list-style: none;
-}
+
 .fa-instagram {
   color: white;
   font-size: 30px;
