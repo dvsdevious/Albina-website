@@ -34,6 +34,8 @@ nav {
   padding-left: 2vh;
 }
 
+/* JOIN NOW BUTTON */
+
 .register-btn {
   position: relative;
   display: inline-block;
@@ -58,7 +60,7 @@ nav {
     0 0 200px #f45fe3;
 }
 
-/* Home Page */
+/* HOME PAGE */
 .banner-area {
   width: 100%;
   height: 100vh;
@@ -112,7 +114,7 @@ nav {
   box-shadow: 0 0 10px -3px rgba(0, 0, 0, 0.1);
 }
 
-/* Nutrition Page */
+/* NUTRITION PAGE */
 .banner-area-nutrition {
   width: 100%;
   height: 100vh;
@@ -133,7 +135,7 @@ nav {
   font-weight: 900;
   line-height: 1.2;
 }
-/* Workouts Page */
+/* WORKOUT PAGE */
 
 .banner-area-workouts {
   width: 100%;
