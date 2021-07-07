@@ -13,7 +13,7 @@ nav {
 }
 .nav-links {
   display: flex;
-  width: 50%;
+  width: 40%;
   justify-content: space-around;
   margin: 1vh 1vh;
   margin-right: 0vh;
@@ -23,12 +23,39 @@ nav {
   list-style: none;
   text-decoration: none;
   color: white;
+  font-family: "Oswald", serif;
+  font-size: larger;
 }
 .nav-links li {
   list-style: none;
 }
 .logo img {
   zoom: 200%;
+  padding-left: 2vh;
+}
+
+.register-btn {
+  position: relative;
+  display: inline-block;
+  padding: 10px 20px;
+  margin: 0;
+  color: #f45fe3;
+  background: transparent;
+  font-size: 15px;
+  text-transform: uppercase;
+  transition: 0.5s;
+  border-radius: 5px;
+  border-color: #f45fe3;
+  font-family: "Oswald", serif;
+  font-weight: 500;
+}
+.register-btn:hover {
+  background: #f45fe3;
+  font-weight: 450;
+  border: none;
+  color: #333333;
+  box-shadow: 0 0 5px #f45fe3, 0 0 25px #f45fe3, 0 0 50px #f45fe3,
+    0 0 200px #f45fe3;
 }
 
 /* Home Page */
