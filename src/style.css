@@ -30,6 +30,7 @@ nav {
 .logo img {
   zoom: 200%;
 }
+
 /* Home Page */
 .banner-area {
   width: 100%;
@@ -38,7 +39,6 @@ nav {
     url("../media/Lifting.jpg");
   background-size: cover;
 }
-
 .content-area {
   height: 100%;
 }
@@ -84,6 +84,7 @@ nav {
   border-radius: 10px;
   box-shadow: 0 0 10px -3px rgba(0, 0, 0, 0.1);
 }
+
 /* Nutrition Page */
 .banner-area-nutrition {
   width: 100%;
@@ -91,6 +92,21 @@ nav {
   background-image: url("../media/Nutrition.jpg");
   background-size: cover;
 }
+.content-area-nutrition {
+  height: 100%;
+}
+.content-nutrition {
+  max-width: 80%;
+  padding: 80px 200px 60px 350px;
+  float: right;
+}
+.content-nutrition h1 {
+  font-size: 80px;
+  color: black;
+  font-weight: 900;
+  line-height: 1.2;
+}
+/* All other stuff */
 
 .fa-instagram {
   color: white;
