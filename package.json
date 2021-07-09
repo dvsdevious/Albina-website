@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon index.js"
+    "devStart": "nodemon server.js"
   },
   "repository": {
     "type": "git",
@@ -17,9 +17,11 @@
   },
   "homepage": "https://github.com/dvsdevious/Albina-website#readme",
   "dependencies": {
+    "bcrypt": "^5.0.1",
+    "ejs": "^3.1.6",
     "express": "^4.17.1"
   },
   "devDependencies": {
-    "nodemon": "^2.0.10"
+    "nodemon": "^2.0.11"
   }
 }
