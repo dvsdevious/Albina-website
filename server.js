@@ -7,11 +7,13 @@ const app = express();
 const bcrypt = require("bcrypt");
 const passport = require("passport");
 const flash = require("express-flash");
-const flash = require("express-session");
+const session = require("express-session");
 
 const initializePassport = require("./passport-config");
-initializePassport(passport, (email) =>
-  users.find((user) => user.email === email)
+initializePassport(
+  passport,
+  (email) => users.find((user) => user.email === email),
+  (id) => users.find((user) => user.id === id)
 );
 
 const users = [];
@@ -28,6 +30,7 @@ app.use(
 );
 app.use(passport.initialize());
 app.use(passport.session());
+require("./passport-config");
 
 app.get("/", (req, res) => {
   res.render("index.ejs", { name: "Kyle" });
@@ -49,6 +52,7 @@ app.post(
 app.get("/register", (req, res) => {
   res.render("register.ejs");
 });
+
 app.post("/register", async (req, res) => {
   try {
     const hashedPassword = await bcrypt.hash(req.body.password, 10);
