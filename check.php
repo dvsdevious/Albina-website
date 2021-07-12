@@ -19,12 +19,16 @@ if(mb_strlen($name) < 5 || mb_strlen($name)>50) {
 
     $pass = md5($pass,"dvsbmbls@123");
 
-    $dbh=mysqli_connect ("localhost", "cpalbinajo_dvsdevious_dbalbinajo_dvsdevious", "firstwebsite@123")
-or die ('I cannot connect to the database.');
-mysql_select_db ("cpalbinajo_dvsdevious_dbalbinajo_registeredusers");
-    $mysql->query("INSERT INTO `users`(`login`, `name`, `password`) VALUES('$name','$login','$password')");
+    $conn = mysqli_connect("localhost", "albinajo_dvsdevious", "firstwebsite@123");
+    if ($conn === false) {
+    die("Ошибка: " . mysqli_connect_error());
+    } 
+    echo "Подключение успешно установлено";
+    mysqli_close($conn);
+    
+    $mysql->query("INSERT INTO `users` (`login`, `name`, `password`) VALUES('$name','$login','$password')");
 
     $mysql->close();
 
-    header('Location: /');
+    header('<Location:/');
 ?>
