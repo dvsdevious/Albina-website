@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Home - Albina</title>
+    <title>Регистрация</title>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -33,9 +33,9 @@
         <li><a href="workouts.html" class="nav-item">Тренировки</a></li>
         <li><a href="nutrition.html" class="nav-item">Питание</a></li>
         <li><a href="FAQ.html" class="nav-item">FAQs</a></li>
-        <li><a href="signin.html" class="nav-item">Войти</a></li>
+        <li><a href="login.html" class="nav-item">Войти</a></li>
       </ul>
-      <a href="join.html"><button class="register-btn">Join Now</button></a>
+      <a href="signup.html"><button class="register-btn">Join Now</button></a>
 
       <div class="burger">
         <div class="line1"></div>
@@ -48,7 +48,7 @@
 
     <div class="banner-area-joinme">
       <div class="content-area-joinme">
-        <form action="check.php" method="POST">
+        <form action="./Includes/signup.inc.php" method="POST">
           <div class="mb-3">
             <label for="formGroupExampleInput2" class="form-label"
               >Ваше Имя</label
@@ -107,7 +107,7 @@
               placeholder="Повторите Пароль"
             />
           </div>
-          <button class="joinme-button">Готово!</button>
+          <button class="joinme-button" type="submit" name="submit">S</button>
         </form>
       </div>
     </div>
