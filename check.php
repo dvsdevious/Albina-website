@@ -17,12 +17,11 @@ if(mb_strlen($name) < 5 || mb_strlen($name)>50) {
         exit();
     }
 
-    $pass = md5($pass,"dvsbmbls@123");
+   $conn = mysqli_connect("localhost", "root", "mypassword");
+if ($conn === false) {
+  die("Ошибка: " . mysqli_connect_error());
+} 
+echo "Подключение успешно установлено";
+mysqli_close($conn);
 
-    $mysql = new mysqli('localhost', 'albinajo_dvsdevious', 'firstwebsite@123','albinajo_registeredusers');
-    $mysql->query("INSERT INTO `users` (`login`, `name`, `password`) VALUES('$name','$login','$password')");
-
-    $mysql->close();
-
-    header ('Location:/');
 ?>
