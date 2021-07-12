@@ -44,9 +44,11 @@
       </div>
     </nav>
 
+    <!-- END OF A NAV BAR-->
+
     <div class="banner-area-joinme">
       <div class="content-area-joinme">
-        <div class="content-joinme">
+        <form action="check.php" method="POST">
           <div class="mb-3">
             <label for="formGroupExampleInput2" class="form-label"
               >Ваше Имя</label
@@ -55,31 +57,34 @@
               type="text"
               class="form-control"
               id="formGroupExampleInput2"
-              placeholder="Another input placeholder"
+              placeholder="Albina Jolokia"
+              name="name"
             />
           </div>
           <div class="mb-3">
             <label for="formGroupExampleInput2" class="form-label">Email</label>
             <input
+              name="login"
               type="text"
               class="form-control"
               id="formGroupExampleInput2"
-              placeholder="Another input placeholder"
+              placeholder="abc@gmail.com"
             />
-            <div class="mb-3">
-              <label for="formGroupExampleInput2" class="form-label"
-                >Телефон</label
-              >
-              <input
-                type="text"
-                class="form-control"
-                id="formGroupExampleInput2"
-                placeholder="Another input placeholder"
-              />
-            </div>
           </div>
-        </div>
-        <button class="joinme-button">Donate!</button>
+          <div class="mb-3">
+            <label for="formGroupExampleInput2" class="form-label"
+              >Пароль</label
+            >
+            <input
+              type="text"
+              class="form-control"
+              id="formGroupExampleInput2"
+              placeholder="Password"
+              name="password"
+            />
+          </div>
+          <button class="joinme-button">Готово!</button>
+        </form>
       </div>
     </div>
   </body>
