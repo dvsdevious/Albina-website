@@ -2,4 +2,4 @@
 deployment:
   tasks:
     - export DEPLOYPATH=/home2/albinajo/repositories/Albiba-website
-    - /bin/cp -a * $DEPLOYPATH
+    - /bin/cp * $DEPLOYPATH
