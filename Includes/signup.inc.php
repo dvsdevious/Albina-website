@@ -27,10 +27,12 @@ if (isset($_POST['submit'])) {
     header("location: ../signup.html?error=passwordsdontmatch");
     exit();
     }
-    if (uidExists($conn, $username) !== false) {
+    if (uidExists($conn, $username, $email) !== false) {
     header("location: ../signup.html?error=usernametaken");
     exit();
     }
+
+    createUser($conn, $name, $email, $username, $pwd);
 }
 else {
     header("location: ../signup.html");
