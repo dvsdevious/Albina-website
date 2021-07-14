@@ -1,6 +1,6 @@
 <?php 
 
-$serverName = "localhost";
+$serverName = "localhost:3306";
 $dBUserame = "albinajo_dvsdevious";
 $dBPassword = "firstwebsite@123";
 $dBName = "albinajo_registeredusers";
@@ -13,5 +13,5 @@ die("Connection failed" .mysqli_connect_error());
 
 
 
-
+ 
 
