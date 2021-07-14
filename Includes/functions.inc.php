@@ -13,7 +13,7 @@ function emptyInputsSignup($name, $email, $username, $pwd, $pwdRepeat) {
 }
 function invalidUid($username) {
     $result;
-    if (!preg_match("/^[a-zA-Z0-9]*$/"), $username)) {
+    if (!preg_match("/^[a-zA-Z0-9]*$/", $username)) {
         $result = true;
     } 
     else {
@@ -48,7 +48,7 @@ function uidExists($conn, $username, $email) {
    $sql = "SELECT * FROM users WHERE userdUid = ? OR  usersEmail =?;";
    $stmt = mssqli_stmt_init($conn);
    if (!mysqli_stmt_prepare($stmt, $sql)) {
-       header("location: ../signup.html?error=stmtfailed");
+       header('Location: http://www.albina-jolokia.com?error=stmtfailed');
        exit();
 }
     mysqli_stmt_bind_param($stmt, "ss", $username, $email);
@@ -69,7 +69,7 @@ function createUser($conn, $name, $email, $username, $pwd) {
    $sql = "INSERT INTO users (usersName, usersEmail, usersUid, usersPwd) VALUES (?, ?, ?, ?);";
    $stmt = mssqli_stmt_init($conn);
    if (!mysqli_stmt_prepare($stmt, $sql)) {
-       header("location: ../signup.html?error=stmtfailed");
+       header('Location: http://www.albina-jolokia.com?error=stmtfailed');
        exit();
 }
     $hashedPwd = password_hash($pwd, PASSWORD_DEFAULT);
@@ -78,6 +78,6 @@ function createUser($conn, $name, $email, $username, $pwd) {
     mysqli_stmt_execute($stmt);
 
     mysqli_stmt_close($stmt);
-    header("location: ../signup.html?error=none");
+    header('Location: http://www.albina-jolokia.com?error=none');
        exit();
 }
