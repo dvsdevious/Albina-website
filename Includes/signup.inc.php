@@ -12,7 +12,7 @@ if (isset($_POST["submit"])) {
     require_once 'functions.inc.php';
 
     if (emptyInputsSignup($name, $email, $username, $pwd, $pwdRepeat) !== false) {
-    header("location: http://www.albina-jolokia.com?error=emptyinput");
+    header("location: ../signup.html?error=emptyinput");
     exit();
     }
     if (invalidEmail($email) !== false) {
