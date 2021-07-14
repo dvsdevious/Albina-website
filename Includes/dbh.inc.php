@@ -1,7 +1,7 @@
 <?php 
 
 $serverName = "localhost:3306";
-$dBUserame = "cpses_al6k77axng";
+$dBUserame = "albinajo_dvsdevious";
 $dBPassword = "firstwebsite@123";
 $dBName = "albinajo_registeredusers";
 
