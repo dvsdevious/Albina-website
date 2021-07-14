@@ -12,30 +12,30 @@ if (isset($_POST['submit'])) {
     require_once 'functions.inc.php';
 
     if (emptyInputsSignup($name, $email, $username, $pwd, $pwdRepeat) !== false) {
-    header("location: ../signup.html?error=emptyinput");
+    header('Location: http://www.albina-jolokia.com?error=emptyinput');
     exit();
     }
     if (invalidUid($username) !== false) {
-    header("location: ../signup.html?error=invaliduid");
+    header('Location: http://www.albina-jolokia.com?error=invaliduid');
     exit();
     }
     if (invalidEmail($email) !== false) {
-    header("location: ../signup.html?error=invaliduid");
+    header('Location: http://www.albina-jolokia.com?error=invaliduid');
     exit();
     }
     if (pwdMatch($pwd, $pwdRepeat) !== false) {
-    header("location: ../signup.html?error=passwordsdontmatch");
+    header('Location: http://www.albina-jolokia.com?error=passwordsdontmatch');
     exit();
     }
     if (uidExists($conn, $username, $email) !== false) {
-    header("location: ../signup.html?error=usernametaken");
+    header('Location: http://www.albina-jolokia.com?error=usernametaken');
     exit();
     }
 
     createUser($conn, $name, $email, $username, $pwd);
 }
 else {
-    header("location: ../signup.html");
+    header('Location: http://www.albina-jolokia.com');
     exit();
 }
 ?>
