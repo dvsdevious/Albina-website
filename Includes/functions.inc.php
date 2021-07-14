@@ -20,7 +20,7 @@ function invalidUid($username) {
         $result = false; 
     }
     return $result;
-};
+}
 
 function invalidEmail($email) {
     $result;
