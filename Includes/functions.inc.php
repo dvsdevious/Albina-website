@@ -9,8 +9,19 @@ function emptyInputsSignup($name, $email, $username, $pwd, $pwdRepeat) {
         $result = false; 
     }
     return $result;
-
 }
+
+function invalidEmail($email) {
+    $result;
+    if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+        $result = true;
+    } 
+    else {
+        $result = false; 
+    }
+    return $result;
+}
+
 function invalidUid($username) {
     $result;
     if (!preg_match("/^[a-zA-Z0-9]*$/", $username)) {
@@ -22,17 +33,6 @@ function invalidUid($username) {
     return $result;
 }
 
-function invalidEmail($email) {
-    $result;
-    if (filter_var($email, FILTER_VALIDATE_EMAIL)) {
-        $result = true;
-    } 
-    else {
-        $result = false; 
-    }
-    return $result;
-
-}
 function pwsMatch($pwd, $pwdRepeat) {
     $result;
     if ($pwd !== $pwdRepeat) {
@@ -42,13 +42,13 @@ function pwsMatch($pwd, $pwdRepeat) {
         $result = false; 
     }
     return $result;
-
 }
+
 function uidExists($conn, $username, $email) {
-   $sql = "SELECT * FROM users WHERE userdUid = ? OR  usersEmail =?;";
-   $stmt = mssqli_stmt_init($conn);
+   $sql = "SELECT * FROM users WHERE usersUid = ? OR usersEmail = ?;";
+   $stmt = mysqli_stmt_init($conn);
    if (!mysqli_stmt_prepare($stmt, $sql)) {
-       header('Location: http://www.albina-jolokia.com?error=stmtfailed');
+       header("location: http://www.albina-jolokia.com?error=stmtfailed");
        exit();
 }
     mysqli_stmt_bind_param($stmt, "ss", $username, $email);
@@ -67,9 +67,9 @@ function uidExists($conn, $username, $email) {
 }
 function createUser($conn, $name, $email, $username, $pwd) {
    $sql = "INSERT INTO users (usersName, usersEmail, usersUid, usersPwd) VALUES (?, ?, ?, ?);";
-   $stmt = mssqli_stmt_init($conn);
+   $stmt = mysqli_stmt_init($conn);
    if (!mysqli_stmt_prepare($stmt, $sql)) {
-       header('Location: http://www.albina-jolokia.com?error=stmtfailed');
+       header("location: http://www.albina-jolokia.com?error=stmtfailed");
        exit();
 }
     $hashedPwd = password_hash($pwd, PASSWORD_DEFAULT);
@@ -78,6 +78,7 @@ function createUser($conn, $name, $email, $username, $pwd) {
     mysqli_stmt_execute($stmt);
 
     mysqli_stmt_close($stmt);
-    header('Location: http://www.albina-jolokia.com?error=none');
+    header("location: http://www.albina-jolokia.com?error=none");
        exit();
 }
+?>
