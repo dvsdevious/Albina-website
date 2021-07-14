@@ -11,31 +11,31 @@ if (isset($_POST["submit"])) {
     require_once 'dbh.inc.php';
     require_once 'functions.inc.php';
 
-    if (emptyInputsSignup($name, $email, $username, $pwd, $pwdRepeat) !== false) {
-    header("location: ../signup.html?error=emptyinput");
+    if (emptyInputSignup($name, $email, $username, $pwd, $pwdRepeat) !== false) {
+    header("location: http://www.albina-jolokia.com/signup.html?error=emptyinput");
     exit();
     }
     if (invalidEmail($email) !== false) {
-    header("location: http://www.albina-jolokia.com?error=invalidemail");
+    header("location: http://www.albina-jolokia.com/signup.html?error=invalidemail");
     exit();
     }
     if (invalidUid($username) !== false) {
-    header("location: http://www.albina-jolokia.com?error=invaliduid");
+    header("location: http://www.albina-jolokia.com/signup.html?error=invaliduid");
     exit();
     }
     if (pwdMatch($pwd, $pwdRepeat) !== false) {
-    header("location: http://www.albina-jolokia.com?error=passwordsdontmatch");
+    header("location: http://www.albina-jolokia.com/signup.html?error=passwordsdontmatch");
     exit();
     }
     if (uidExists($conn, $username, $email) !== false) {
-    header("location: http://www.albina-jolokia.com?error=usernametaken");
+    header("location: http://www.albina-jolokia.com/signup.html?error=usernametaken");
     exit();
     }
 
     createUser($conn, $name, $email, $username, $pwd);
 }
 else {
-    header("location: http://www.albina-jolokia.com");
+    header("location: http://www.albina-jolokia.com/profile.html");
     exit();
 }
 ?>

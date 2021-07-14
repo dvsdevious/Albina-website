@@ -1,6 +1,6 @@
 <?php 
 
-function emptyInputsSignup($name, $email, $username, $pwd, $pwdRepeat) {
+function emptyInputSignup($name, $email, $username, $pwd, $pwdRepeat) {
     $result;
     if (empty($name) || empty($email) || empty($username) || empty($pwd) || empty($pwdRepeat)) {
         $result = true;
@@ -48,7 +48,7 @@ function uidExists($conn, $username, $email) {
    $sql = "SELECT * FROM users WHERE usersUid = ? OR usersEmail = ?;";
    $stmt = mysqli_stmt_init($conn);
    if (!mysqli_stmt_prepare($stmt, $sql)) {
-       header("location: http://www.albina-jolokia.com?error=stmtfailed");
+       header("location: http://www.albina-jolokia.com/signup.html?error=stmtfailed");
        exit();
 }
     mysqli_stmt_bind_param($stmt, "ss", $username, $email);
@@ -69,7 +69,7 @@ function createUser($conn, $name, $email, $username, $pwd) {
    $sql = "INSERT INTO users (usersName, usersEmail, usersUid, usersPwd) VALUES (?, ?, ?, ?);";
    $stmt = mysqli_stmt_init($conn);
    if (!mysqli_stmt_prepare($stmt, $sql)) {
-       header("location: http://www.albina-jolokia.com?error=stmtfailed");
+       header("location: http://www.albina-jolokia.com/signup.html?error=stmtfailed");
        exit();
 }
     $hashedPwd = password_hash($pwd, PASSWORD_DEFAULT);
@@ -78,7 +78,7 @@ function createUser($conn, $name, $email, $username, $pwd) {
     mysqli_stmt_execute($stmt);
 
     mysqli_stmt_close($stmt);
-    header("location: http://www.albina-jolokia.com?error=none");
+    header("location: http://www.albina-jolokia.com/signup.html?error=none");
        exit();
 }
 ?>
