@@ -1,0 +1,36 @@
+    <div class="banner-area-joinme">
+      <div class="content-area-joinme">
+        <h1>Login</h1>
+        <% if (messages.error) { %>
+            <%= messages.error %>
+            <% } %>
+        <form action="/login" method="POST">
+          <div class="mb-3">
+            <label for="email">Email</label>
+            <input
+              type="text"
+              name="email"
+              id="email"
+              placeholder="abc@gmail.com"
+              class="form-control"
+              required
+            />
+          </div>
+          <div class="mb-3">
+            <label for="password">Password</label>
+            <input
+              type="password"
+              name="password"
+              id="password"
+              class="form-control"
+              required
+            />
+          </div>
+          <button class="joinme-button" type="submit">
+            Login
+          </button>
+        </form>
+      </div>
+    </div>
+    <a href='/register'>Register</a>
+  </body>
