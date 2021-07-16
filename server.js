@@ -20,7 +20,7 @@ db.once("open", () => console.log("Connected to Mongoose"));
 
 //Middlewares
 app.use(express.json());
-app.use(express.static(__dirname + "/html"));
+app.use(express.urlencoded({ extended: false }));
 
 // Route Middlewares
 app.use("/api/user", authRoute);
