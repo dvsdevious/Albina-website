@@ -44,30 +44,27 @@
 
      <div class="banner-area-joinme">
       <div class="content-area-joinme">
-        <form action="./Includes/login.inc.php" method="POST">
+        <form action="./login" method="POST">
           <div class="mb-3">
             <label for="formGroupExampleInput2" class="form-label"
-              >Email</label
-            >
+              >Email</label>
             <input
-              type="text"
+              type="email"
               name="email"
-              placeholder="Email"
+              placeholder="abc@example.com"
               class="form-control"
-              id="formGroupExampleInput2"
-            />
+              id="email"
+              required>
           </div>
           <div class="mb-3">
             <label for="formGroupExampleInput2" class="form-label"
-              >Пароль</label
-            >
+              >Пароль</label>
             <input
               type="password"
               name="password"
               class="form-control"
-              id="formGroupExampleInput2"
-              placeholder="Пароль"
-            />
+              id="password"
+              required>
           </div><button class="joinme-button" type="submit" name="submit">Login</button>
           </div>
           
