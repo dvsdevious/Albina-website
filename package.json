@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/dvsdevious/Albina-website#readme",
   "dependencies": {
+    "ajv": "^8.6.2",
     "bcrypt": "^5.0.1",
     "bcryptjs": "^2.4.3",
     "body-parser": "^1.19.0",
@@ -26,6 +27,7 @@
     "express-ejs-layouts": "^2.5.1",
     "express-flash": "0.0.2",
     "express-session": "^1.17.2",
+    "joi": "^17.4.1",
     "jsonwebtoken": "^8.5.1",
     "method-override": "^3.0.0",
     "mongoose": "^5.13.2",
