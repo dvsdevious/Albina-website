@@ -23,5 +23,3 @@ app.use(express.json());
 // Route Middlewares
 app.use("/api/user", authRoute);
 app.use("/api/posts", postRoute);
-
-app.listen(3000, () => console.log("Server Up and running"));
