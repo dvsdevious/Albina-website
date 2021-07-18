@@ -44,31 +44,35 @@
       </div>
     </nav>
 
-    <div class="container">
-      <h1>Sign Up</h1>
-      <form action="/register" method="POST">
-        <div class="mb-3">
-          <label>Name</label>
-          <input type="text" class="form-control" id="reg-name" required />
-        </div>
-        <div class="mb-3">
-          <label class="form-label">Email address</label>
-          <input type="email" class="form-control" id="reg-email" required />
-        </div>
-        <div class="mb-3">
-          <label class="form-label">Password</label>
-          <input
-            type="password"
-            class="form-control"
-            id="reg-password"
-            required
-          />
-        </div>
+    <div class="reg-banner-area">
+      <div class="reg-content-area">
+        <h1>Sign Up</h1>
+        <form action="/register" method="POST">
+          <div class="mb-3">
+            <label>Name</label>
+            <input type="text" class="form-control" id="reg-name" required />
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Email address</label>
+            <input type="email" class="form-control" id="reg-email" required />
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Password</label>
+            <input
+              type="password"
+              class="form-control"
+              id="reg-password"
+              required
+            />
+          </div>
 
-        <button type="submit" class="btn btn-primary">
-          <a href="./login.html">Submit</a>
-        </button>
-      </form>
+          <a href="./login.html"
+            ><button type="submit" class="btn btn-primary" id="register-btn">
+              Submit
+            </button></a
+          >
+        </form>
+      </div>
     </div>
   </body>
 </html>
