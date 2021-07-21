@@ -1,18 +1,18 @@
-import Dashboard from "../components/Dashboard";
-import Login from "../components/Login";
+import Dashboard from '../components/Dashboard'
+import Login from '../components/Login'
 
 export default [
   {
-    path: "/",
-    name: "dashboard",
+    path: '/',
+    name: 'dashboard',
     component: Dashboard,
     meta: {
-      authRequired: true,
-    },
+      authRequired: true
+    }
   },
   {
-    path: "/login",
-    name: "login",
-    component: Login,
-  },
-];
+    path: '/login',
+    name: 'login',
+    component: Login
+  }
+]
