@@ -5,12 +5,13 @@
   "scripts": {
     "start": "node server.js"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/dvsdevious/Albina-website.git"
-  },
-  "author": "",
+  "repository": "git+https://github.com/dvsdevious/Albina-website.git",
+  "author": "dvsdevious <daria.sheremeteva@gmail.com>",
   "license": "ISC",
+  "private": "true",
+  "worksapces": [
+    "packages/*"
+  ],
   "bugs": {
     "url": "https://github.com/dvsdevious/Albina-website/issues"
   },
@@ -20,12 +21,14 @@
     "bcrypt": "^5.0.1",
     "bcryptjs": "^2.4.3",
     "body-parser": "^1.19.0",
+    "bootstrap": "^5.0.2",
     "cors": "^2.8.5",
     "ejs": "^3.1.6",
     "express": "^4.17.1",
     "express-ejs-layouts": "^2.5.1",
     "express-flash": "0.0.2",
     "express-session": "^1.17.2",
+    "gatsby": "^3.10.1",
     "gotrue-js": "^0.9.29",
     "joi": "^17.4.1",
     "jsonwebtoken": "^8.5.1",
@@ -34,6 +37,8 @@
     "passport": "^0.4.1",
     "passport-local": "^1.0.0",
     "passport-local-mongoose": "^6.1.0",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
     "v-model": "0.0.9"
   },
   "devDependencies": {

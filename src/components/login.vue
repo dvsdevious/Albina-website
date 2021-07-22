@@ -1,48 +1,47 @@
 <template>
-  <form @submit.prevent="login()">
-    <label>
-      Username:
-      <input type="text" v-model="loginCreds.email" />
-    </label>
-    <label>
-      Password:
-      <input type="password" v-model="loginCreds.password" />
-    </label>
-    <button type="submit">Login</button>
-  </form>
+  <div class="vue-tempalte">
+    <form>
+      <h3>Sign In</h3>
 
-  
+      <div class="form-group">
+        <label>Email address</label>
+        <input type="email" class="form-control form-control-lg" />
+      </div>
+
+      <div class="form-group">
+        <label>Password</label>
+        <input type="password" class="form-control form-control-lg" />
+      </div>
+
+      <button type="submit" class="btn btn-dark btn-lg btn-block">
+        Sign In
+      </button>
+
+      <p class="forgot-password text-right mt-2 mb-4">
+        <router-link to="/forgot-password">Forgot password ?</router-link>
+      </p>
+
+      <div class="social-icons">
+        <ul>
+          <li>
+            <a href="#"><i class="fa fa-google"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="fa fa-facebook"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="fa fa-twitter"></i></a>
+          </li>
+        </ul>
+      </div>
+    </form>
+  </div>
+</template>
+
 <script>
 export default {
-    name: "Login",
   data() {
-    return {
-      loginCreds: {
-        email: null,
-        password: null
-      },
-      signupCreds: {
-        email: null,
-        password: null
-      }
-    }
-  },
-    methods: {
-    ...mapActions("auth", ["attemptLogin", "attemptSignUp"]),
-    signup() {
-      //call API signup//
-      this.attemptSignUp(this.signupCreds)
-        .then(() => console.log("A confirmation email has been sent to you!"))
-        .catch(err => console.log(err, "womp womp. Something went wrong."))
-    },
-    login() {
-      //call API login//
-      this.attemptLogin(this.loginCreds)
-        .then(() => {
-          this.$router.push(this.$route.query.redirect || "/");
-          console.log('You have successfully logged in')
-        })
-        .catch(err => console.log(err, "womp womp. Something went wrong."))
-    }
+    return {}
   }
 }
+</script>
