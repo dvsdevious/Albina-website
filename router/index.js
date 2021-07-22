@@ -1,20 +1,30 @@
 import Vue from 'vue'
-import Router from 'vue-router'
-import routes from './routes'
-Vue.use(Router)
-const router = new Router({
-  routes,
-  mode: 'history'
-})
-export default router
+import VueRouter from 'vue-router'
 
-router.beforeEach((to, from, next) => {
-  const authRequired = to.matched.some((route) => route.meta.authRequired)
-  if (!authRequired) return next()
-  // check if current user
-  if (store.getters['auth/loggedIn']) {
-    // maybe do some validation to check token is valid //
-    next()
+Vue.use(VueRouter)
+
+const routes = [
+  {
+    path: '/',
+    name: 'signup',
+    component: () => import('../components/Signup.vue')
+  },
+  {
+    path: '/login',
+    name: 'login',
+    component: () => import('../components/Login.vue')
+  },
+  {
+    path: '/forgot-password',
+    name: 'forgot-password',
+    component: () => import('../components/ForgotPassword.vue')
   }
-  next({ name: 'login', query: { redirectFrom: to.fullPath } })
+]
+
+const router = new VueRouter({
+  mode: 'history',
+  base: process.env.BASE_URL,
+  routes
 })
+
+export default router
