@@ -86,14 +86,14 @@
   width: 80%;
 }
 
-.form-inputs p {
+.form-inputs {
   font-size: 0.8rem;
   margin-top: 0.5rem;
   color: #f00e0e;
 }
 
 .form-label {
-  display: inline-block;
+  display: flex;
   font-size: 0.8rem;
   margin-bottom: 6px;
   color: #fff;

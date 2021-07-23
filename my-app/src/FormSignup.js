@@ -13,56 +13,48 @@ const FormSignup = ({ submitForm }) => {
     <div className="form-content-right">
       <form onSubmit={handleSubmit} className="form">
         <h1>Get Started! Create your account</h1>
-        <div className="form-input">
-          <label htmlFor="username" className="form-label">
-            Username
-          </label>
+        <div className="form-inputs">
+          <label className="form-label">Username</label>
           <input
+            className="form-input"
             type="text"
             name="username"
-            clasName="form-input"
             placeholder="Enter your username"
             value={values.username}
             onChange={handleChange}
           />
           {errors.username && <p>{errors.username}</p>}
         </div>
-        <div className="form-input">
-          <label htmlFor="email" className="form-label">
-            Email
-          </label>
+        <div className="form-inputs">
+          <label className="form-label">Email</label>
           <input
+            className="form-input"
             type="email"
             name="email"
-            clasName="form-input"
             placeholder="Enter your email"
             value={values.email}
             onChange={handleChange}
           />
           {errors.email && <p>{errors.email}</p>}
         </div>
-        <div className="form-input">
-          <label htmlFor="email" className="form-label">
-            Password
-          </label>
+        <div className="form-inputs">
+          <label className="form-label">Password</label>
           <input
+            className="form-input"
             type="password"
             name="password"
-            clasName="form-input"
             placeholder="Enter password"
             value={values.password}
             onChange={handleChange}
           />
           {errors.password && <p>{errors.password}</p>}
         </div>
-        <div className="form-input">
-          <label htmlFor="email" className="form-label">
-            Confirm Password
-          </label>
+        <div className="form-inputs">
+          <label className="form-label">Confirm Password</label>
           <input
+            className="form-input"
             type="password"
             name="password2"
-            clasName="form-input"
             placeholder="Repeat password"
             value={values.password2}
             onChange={handleChange}
